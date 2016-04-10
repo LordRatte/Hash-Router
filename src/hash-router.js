@@ -130,7 +130,7 @@
                 for (var q = 0; q < hashParts.hashQueryArray.length; q++) {
                     var keyValue = (hashParts.hashQueryArray[q]).split('=');
                     if (keyValue.length >= 1 && keyValue[0]) {
-                        query[keyValue[0]] = keyValue[1] ? decodeURIComponent(keyValue[1]) : '';
+                        query[decodeURIComponent(keyValue[0])] = keyValue[1] ? decodeURIComponent(keyValue[1]) : '';
                     }
                 }
             }
